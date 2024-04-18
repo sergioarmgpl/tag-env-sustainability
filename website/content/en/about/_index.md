@@ -1,5 +1,5 @@
 ---
-title: About TAG Environmental Sustainability 3
+title: About TAG Environmental Sustainability
 linkTitle: About
 toc_hide: true
 list_pages: true
