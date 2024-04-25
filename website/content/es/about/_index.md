@@ -1,5 +1,5 @@
 ---
-title: Acerca de TAG Environmental Sustainability TEST7
+title: Acerca de TAG Environmental Sustainability
 linkTitle: Acerca de
 toc_hide: true
 list_pages: true
