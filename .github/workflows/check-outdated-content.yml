@@ -161,7 +161,7 @@ jobs:
       id: create_issues
       shell: bash
       run: |
-        languages=("es" "zh")
+        
         workflow_id=$(curl -s -X GET -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${GITHUB_ACTOR}/${GITHUB_REPOSITORY}/actions/workflows" | jq '.workflows[] | select(.name == "create-issue.yml") | .id')
         echo "(DEBUG) Getting workflow_id "$workflow_id
         curl -X POST \
