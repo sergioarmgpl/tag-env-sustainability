@@ -168,7 +168,7 @@ jobs:
               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Accept: application/vnd.github.v3+json" \
               https://api.github.com/repos/${GITHUB_ACTOR}/${GITHUB_REPOSITORY}/actions/workflows/${workflow_id}/dispatches \
-              -d '{"ref":"main", "inputs": {"language":"$lang"}}'
+              -d '{"ref":"main", "inputs": {"language":"es"}}'
               
       #  for lang in ${languages[@]}; do
       #      curl -X POST \
