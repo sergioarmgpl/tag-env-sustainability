@@ -138,17 +138,17 @@ jobs:
           echo -e $(cat $CONTENT_DIR/es_files.md)
           echo "(DEBUG) ZH files"
           echo -e $(cat $CONTENT_DIR/zh_files.md)
-    - name: Create Issue to Translate into Spanish
-      uses: peter-evans/create-issue-from-file@v5
-      with:
-        title: Pending pages to translate into Spanish
-        content-filepath: website/content/es_files.md
-        assignees: Dianmz, sergioarmgpl
-        labels: |
-          help wanted
-          translations
-          good first issue
-          issue/tracking
+    #- name: Create Issue to Translate into Spanish
+    #  uses: peter-evans/create-issue-from-file@v5
+    #  with:
+    #    title: Pending pages to translate into Spanish
+    #    content-filepath: website/content/es_files.md
+    #    assignees: Dianmz, sergioarmgpl
+    #    labels: |
+    #      help wanted
+    #      translations
+    #      good first issue
+    #      issue/tracking
     - uses: JasonEtco/create-an-issue@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
