@@ -15,14 +15,11 @@ jobs:
   language:
     runs-on: ubuntu-latest
     steps:
-       - name: Test of creating Issue
-         run: |
-           echo "Var: ${{ inputs.language }}"
-    #  - uses: JasonEtco/create-an-issue@v2
-    #    env:
-    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #      ASSIGNEES: sergioarmgpl, Dianmz
-    #      LABELS: help wanted,translations,good first issue,issue/tracking
-    #    with:
-    #      update_existing: true
-    #      filename: website/content/${{ github.event.inputs.language }}_files.md
+      - uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ASSIGNEES: sergioarmgpl, Dianmz
+          LABELS: help wanted,translations,good first issue,issue/tracking
+        with:
+          update_existing: true
+          filename: website/content/${{ github.event.inputs.language }}_files.md
