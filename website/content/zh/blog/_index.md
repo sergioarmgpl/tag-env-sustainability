@@ -1,5 +1,5 @@
 ---
-title: 博客50
+title: 博客
 linkTitle: 博客
 toc_hide: true
 list_pages: true
