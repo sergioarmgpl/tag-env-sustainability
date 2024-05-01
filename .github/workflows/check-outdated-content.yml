@@ -158,18 +158,17 @@ jobs:
     #    update_existing: true
     #    filename: website/content/es_files.md
     - name: Executing issues for languages
-      run: bash create-issue.yml 'es'
+      #run: bash create-issue.yml 'es'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #  id: create_issues
-    #  shell: bash
-    #  run: |
-          
-    #    curl -X POST \
-    #          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-    #          -H "Accept: application/vnd.github.v3+json" \
-    #          https://api.github.com/repos/${GITHUB_ACTOR}/${GITHUB_REPOSITORY}/actions/workflows/${workflow_id}/dispatches \
-     #         -d '{"ref":"main", "inputs": {"language":"es"}}'
+      id: create_issues
+      shell: bash
+      run: |
+        curl -X POST \
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/${GITHUB_ACTOR}/${GITHUB_REPOSITORY}/actions/workflows/${workflow_id}/dispatches \
+              -d '{"ref":"main", "inputs": {"language":"es"}}'
               
       #  for lang in ${languages[@]}; do
       #      curl -X POST \
